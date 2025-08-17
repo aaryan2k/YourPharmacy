@@ -33,9 +33,9 @@ const ThemeIcon = () => {
   };
   return (
     <span onClick={handleMode}>
-      {theme === "light" && <FaSun size='24' className='top-navigation-icon' />}
-      {theme === "dark" && <FaMoon size='24' className='top-navigation-icon' />}
-      {theme === "system" && <FaDesktop size='24' className='top-navigation-icon' />}
+      {theme === "light" && <FaSun size='24' className='top-navigation-icon text-yellow-300 hover:text-blue-700 ' />}
+      {theme === "dark" && <FaMoon size='24' className='top-navigation-icon text-blue-300 hover:text-blue-700 ' />}
+      {theme === "system" && <FaDesktop size='24' className='top-navigation-icon text-white hover:text-blue-700 ' />}
     </span>
   );
 };
