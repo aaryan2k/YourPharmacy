@@ -1,6 +1,7 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
- /* @layer components {
+ @layer components {
   .sidebar-icon {
     @apply relative flex items-center justify-center 
         h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
@@ -13,4 +14,12 @@
           rounded-md shadow-md text-white bg-gray-900 text-xs font-bold
           transition-all duration-100 scale-0 origin-left;
   }
- } */
+
+  .top-navigation-icon {
+    @apply text-gray-500
+    mr-3 ml-4
+    transition duration-300 ease-in-out 
+    hover:text-pink-400 
+    cursor-pointer items-center justify-center mt-[39.5rem];
+  }
+ }
