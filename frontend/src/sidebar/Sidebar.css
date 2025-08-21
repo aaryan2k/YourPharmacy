@@ -1,11 +1,11 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
  @layer components {
   .sidebar-icon {
     @apply relative flex items-center justify-center 
-        h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
-      bg-gray-800 text-blue-600 hover:bg-blue-700 hover:text-white 
+        h-12 w-12 my-2.5 mx-auto shadow-lg bg-gray-300
+      dark:bg-gray-800 text-blue-600 hover:bg-blue-700 hover:text-white 
        rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
   }
 
@@ -19,6 +19,11 @@
     @apply text-gray-500
     mr-3 ml-4
     transition duration-300 ease-in-out 
-    cursor-pointer items-center justify-center mt-[39.5rem];
+    cursor-pointer items-center justify-center mt-[32.5rem];
   }
- }
+
+  .logo-icon {
+    @apply relative flex items-center justify-center 
+        h-12 w-12 mt-2 mb-10 mx-auto;
+  }
+ } */

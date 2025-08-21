@@ -1,10 +1,11 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
- /* @layer components {
+ @layer components {
   .sidebar-icon {
     @apply relative flex items-center justify-center 
-        h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
-      bg-gray-800 text-green-500 hover:bg-green-600 hover:text-white 
+        h-12 w-12 my-2.5 mx-auto shadow-lg bg-gray-300
+      dark:bg-gray-800 text-blue-600 hover:bg-blue-700 hover:text-white 
        rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
   }
 
@@ -13,4 +14,50 @@
           rounded-md shadow-md text-white bg-gray-900 text-xs font-bold
           transition-all duration-100 scale-0 origin-left;
   }
- } */
+
+  .top-navigation-icon {
+    @apply text-gray-500
+    mr-3 ml-4
+    transition duration-300 ease-in-out 
+    cursor-pointer items-center justify-center mt-[32.5rem];
+  }
+
+  .logo-icon {
+    @apply relative flex items-center justify-center 
+        h-12 w-12 mt-2 mb-10 mx-auto;
+  }
+
+    .form-control {
+          @apply bg-gray-200 dark:bg-gray-700 p-6 rounded-lg shadow-md w-full max-w-md;
+  }
+  .input-control {
+      @apply border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2
+            focus:ring-blue-500 w-full h-12 text-lg text-black dark:text-gray-300;
+  }
+
+  .button-control {
+      @apply bg-blue-500 text-white p-3 rounded-lg w-full text-lg hover:bg-blue-600 transition-colors;
+  }
+ }
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #167bff;
+}
+.continue-p{
+  font-size: 12px;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: center;
+}

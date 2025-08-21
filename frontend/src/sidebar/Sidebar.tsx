@@ -5,10 +5,11 @@ import "./Sidebar.css"
 function Sidebar() {
 
   return (
-    <div className="fixed top-0 left-0 h-screen w-16 flex flex-col bg-white dark:bg-gray-900 text-black dark:text-white m-0 border-gray-400 border-2"> 
-        <SidebarIcon icon={<FaBeer size="32" />}/>
-        <SidebarIcon icon={<FaFire size="32" />}/>
-        <SidebarIcon icon={<FaPoo size="32" />}/>
+    <div className="fixed top-0 left-0 h-screen w-16 flex flex-col bg-white dark:bg-gray-900 text-black dark:text-white m-0 shadow-md"> 
+        <LogoIcon />
+        <SidebarIcon icon={<FaBeer size="30" />}/>
+        <SidebarIcon icon={<FaFire size="30" />}/>
+        <SidebarIcon icon={<FaPoo size="30" />}/>
         <ThemeIcon />
     </div>
     
@@ -21,6 +22,12 @@ const SidebarIcon = ({ icon, text = 'tooltip' }: { icon: any; text?: string }) =
         <span className="sidebar-tooltip group-hover:scale-100">
             {text}
         </span>
+    </div>
+)
+
+const LogoIcon = () => (
+    <div className="logo-icon">
+        <img src="/Logo.png" alt="Logo" />
     </div>
 )
 
