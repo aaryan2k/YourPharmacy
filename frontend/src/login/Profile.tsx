@@ -5,8 +5,7 @@ import { doc, getDoc } from "firebase/firestore";
 type UserDetails = {
   email: string;
   firstName: string;
-  // lastName?: string;
-  photo: string;
+  lastName?: string;
   // Add other fields as needed
 };
 
@@ -23,7 +22,7 @@ function Profile() {
         setUserDetails({
           email: data.email,
           firstName: data.firstName,
-          photo: data.photo,
+          lastName: data.lastName,
         });
         console.log(data);
       } else {
@@ -45,29 +44,25 @@ function Profile() {
     }
   }
   return (
-    <div>
-      {userDetails ? (
-        <>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <img
-              src={userDetails.photo}
-              width={"40%"}
-              style={{ borderRadius: "50%" }}
-            />
-          </div>
-          <h3>Welcome {userDetails.firstName} 🙏🙏</h3>
-          <div>
-            <p>Email: {userDetails.email}</p>
-            <p>First Name: {userDetails.firstName}</p>
-            {/* <p>Last Name: {userDetails.lastName}</p> */}
-          </div>
-          <button className="btn btn-primary" onClick={handleLogout}>
-            Logout
-          </button>
-        </>
-      ) : (
-        <p>Loading...</p>
-      )}
+    <div className="flex justify-center min-h-screen bg-gray-300 dark:bg-gray-800">
+      <div className="profile-control">
+        {userDetails ? (
+          <>
+            <h3 className="text-black dark:text-gray-300 font-bold text-4xl p-3">Welcome {userDetails.firstName}! 🙏🙏</h3>
+            <div>
+              <p className="block text-left text-black dark:text-gray-300 ml-50">Email: {userDetails.email}</p>
+              <p className="block text-left text-black dark:text-gray-300 ml-50">First Name: {userDetails.firstName}</p>
+              <p className="block text-left text-black dark:text-gray-300 ml-50">Last Name: {userDetails.lastName}</p>
+            </div>
+            <button className="profile-button-control" onClick={handleLogout}>
+              Logout
+            </button>
+            <p className="block text-center text-black dark:text-gray-300 mt-5 font-bold">Remember, we will NEVER ask for your password!</p>
+          </>
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
     </div>
   );
 }

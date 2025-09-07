@@ -27,7 +27,7 @@
         h-12 w-12 mt-2 mb-10 mx-auto;
   }
 
-    .form-control {
+  .form-control {
           @apply bg-gray-200 dark:bg-gray-700 p-6 rounded-lg shadow-md w-full max-w-md;
   }
   .input-control {
@@ -37,6 +37,14 @@
 
   .button-control {
       @apply bg-blue-500 text-white p-3 rounded-lg w-full text-lg hover:bg-blue-600 transition-colors;
+  }
+
+  .profile-control {
+        @apply bg-gray-200 dark:bg-gray-700 rounded-lg shadow-md w-screen h-75 mt-3;
+  }
+
+  .profile-button-control {
+      @apply bg-blue-500 text-white p-3 rounded-lg w-100 text-lg hover:bg-blue-600 transition-colors;
   }
  }
 
