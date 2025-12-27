@@ -54,13 +54,17 @@ function Profile() {
               <p className="block text-left text-black dark:text-gray-300 ml-50">First Name: {userDetails.firstName}</p>
               <p className="block text-left text-black dark:text-gray-300 ml-50">Last Name: {userDetails.lastName}</p>
             </div>
-            <button className="profile-button-control" onClick={handleLogout}>
-              Logout
-            </button>
+              <button className="profile-button-control mr-5" onClick={handleLogout}>
+                Logout
+              </button>
+
+              <button className="profile-button-control ml-5" onClick={() => window.location.href = "/#/profile/edit"}>
+                Edit Profile
+              </button>
             <p className="block text-center text-black dark:text-gray-300 mt-5 font-bold">Remember, we will NEVER ask for your password!</p>
           </>
         ) : (
-          <p>Loading...</p>
+          <p className="text-black dark:text-gray-300">Loading...</p>
         )}
       </div>
     </div>

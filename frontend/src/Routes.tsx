@@ -11,6 +11,8 @@ import Home from "./home/Home";
 import Login from "./login/Login";
 import Register from "./login/Register";
 import Profile from "./login/Profile";
+import ProfileEdit from "./login/ProfileEdit";
+
 // // import Standings from "./standings/Standings";
 // // import StandingsLoader from "./standings/StandingsLoader";
 // // import Stats from "./stats/Stats";
@@ -24,6 +26,7 @@ const RoutesJSX = (
     <Route path="/login" element={<Login />} />
     <Route path="/register" element={<Register />} />
     <Route path="/profile" element={<Profile />} />
+    <Route path="/profile/edit" element={<ProfileEdit />} />
 
     {/* <Route path="standings" element={<Standings />} loader={StandingsLoader}>
       errorElement={<ErrorPage />} 

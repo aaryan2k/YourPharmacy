@@ -14,8 +14,8 @@ function Register() {
     const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            await createUserWithEmailAndPassword(auth, email, password);
-            const user = auth.currentUser;
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
             console.log(user);
             if (user) {
                 await setDoc(doc(db, "Users", user.uid), {
@@ -24,6 +24,7 @@ function Register() {
                     lastName: lname
                 });
             }
+            window.location.href = "/#/login";
             console.log("User registered successfully");
             toast.success("Registered Successfully", {position: "top-center"});
         } catch(error: any) {
